@@ -1,0 +1,6 @@
+celcius = int(input('Введите градусы по цельсия: '))
+farenheit = celcius*(9/5) + 32
+kelvin = celcius + 273.15
+
+print(f'{celcius}°C = {farenheit:.2f}°F')
+print(f'{celcius}°C = {kelvin:.2f}°K')
