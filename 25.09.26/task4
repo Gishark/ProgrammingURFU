@@ -1,0 +1,8 @@
+from collections import *
+
+text = input('Введите текст: ').lower()
+
+cnts = Counter(text)
+
+print(cnts)
+print(cnts.most_common(3))
