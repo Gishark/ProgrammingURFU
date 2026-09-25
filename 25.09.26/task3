@@ -3,9 +3,9 @@ import string
 
 letters = random.choices(string.ascii_uppercase, k=3)
 nums = random.choices(string.digits, k=3)
-sims = random.choices('!@#$%^&*', k=2)
+simbols = random.choices('!@#$%^&*', k=2)
 
-pasw = letters + nums + sims
+pasw = letters + nums + simbols
 random.shuffle(pasw)
 
 result = "".join(pasw)
