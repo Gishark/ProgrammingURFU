@@ -1,4 +1,4 @@
-celcius = int(input('Введите градусы по цельсия: '))
+celcius = float(input('Введите градусы по цельсия: '))
 farenheit = celcius*(9/5) + 32
 kelvin = celcius + 273.15
 
