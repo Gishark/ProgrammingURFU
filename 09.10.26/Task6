@@ -1,0 +1,31 @@
+import random
+
+WORDS = ["тест", "игра", "виселица", "урфу"]
+MAX_ERRORS = 6
+
+word = random.choice(WORDS)
+guessed = set()
+errors = 0
+
+while errors < MAX_ERRORS:
+    shown = " ".join(ch if ch in guessed else "_" for ch in word)
+    print(f"\nСлово: {shown}")
+    print(f"Ошибок: {errors}/{MAX_ERRORS}")
+
+    if "_" not in shown:
+        print("Ты выиграл!")
+        break
+
+    letter = input("Введи букву: ").lower()
+
+    if len(letter) != 1 or not letter.isalpha():
+        print("Нужна одна буква.")
+    elif letter in guessed:
+        print("Эта буква уже была.")
+    else:
+        guessed.add(letter)
+        if letter not in word:
+            errors += 1
+            print("Нет такой буквы!")
+else:
+    print(f"\nТы проиграл. Было слово: {word}")
