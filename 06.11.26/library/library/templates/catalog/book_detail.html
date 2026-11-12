@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title|title }} - BlogSite{% endblock %}
+
+{% block content %}
+<article class="post-detail">
+    <h2>{{ book.title|title }}</h2>
+
+    <p class="date">Опубликовано: {{ book.published_date|date:"d E Y" }}</p>
+    <p>Автор: {{ book.author }}</p>
+
+    <p>{{ book.content }}</p>
+
+    <p><a href="{% url 'book_list' %}">← Назад к каталогу</a></p>
+</article>
+{% endblock %}
